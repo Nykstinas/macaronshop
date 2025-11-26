@@ -1,4 +1,4 @@
-package com.macaronshop.macaronshop;
+package com.pet.macaronshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
