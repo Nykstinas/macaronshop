@@ -2,19 +2,21 @@ package com.pet.macaronshop.controller;
 
 import com.pet.macaronshop.model.Backet;
 import com.pet.macaronshop.model.BacketItem;
+import com.pet.macaronshop.model.Item;
 import com.pet.macaronshop.repository.InMemoryBacketDAO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.sql.SQLException;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/backets")
-public class BacketClass {
+public class BacketClass{
 
     private final InMemoryBacketDAO backetDAO;
 
-    public BacketController(InMemoryBacketDAO backetDAO) {
+    public BacketClass(InMemoryBacketDAO backetDAO) {
         this.backetDAO = backetDAO;
     }
 
@@ -32,10 +34,14 @@ public class BacketClass {
         return ResponseEntity.notFound().build();
     }
 
-    // Создать новую корзину
     @PostMapping
     public Backet createBacket(@RequestBody Backet backet) {
         return backetDAO.saveBacket(backet);
+    }
+
+    @PostMapping
+    public Item createItem(@RequestBody Item item) throws SQLException {
+        return backetDAO.saveItem(item);
     }
 
     // Удалить корзину
@@ -79,3 +85,4 @@ public class BacketClass {
         return ResponseEntity.notFound().build();
     }
 }
+

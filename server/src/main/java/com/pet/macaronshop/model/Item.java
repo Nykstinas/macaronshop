@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class BacketItem {
+public class Item  {
 
     private Long itemId;
-    private int quantity;
+    private String name;
+    private String title;
+    private Integer price;
 }

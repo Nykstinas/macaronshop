@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Host Grotesk", sans-serif;
+}
+
+.header {
+  display: flex;
+  background: #F7EBE5;
+  padding: 1.5vh 5%;
+  justify-content: space-between;
+}
+
+.header__links {
+  display: flex;
+  gap: 4vh;
+}
+
+.main {
+  padding: 1.5vh 7%;
+  background: #f7f7f7;
+}
+
+.main__row {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+  }
+}
+
+.main__links {
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.main__link {
+  font-size: 5vh;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.main__row {
+  div {
+    background: #F7EBE5;
+    padding: .7% 2%;
+    border-radius: 2vh;
+  }
+
+  margin-bottom: 4vh;
+}
+
+.main__cards {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-gap: 3vh;
+}
+
+.box__card {
+  background: white;
+  border-radius: 1vh;
+
+  img {
+    width: 100%;
+  }
+}
+
+.box__content {
+  padding: 2vh;
+}
+
+.box__name {
+  margin-bottom: 1vh;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.box__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.box__buttons_cost {
+  color: #E7426A;
+  font-size: 2vh;
+  font-weight: bold;
+  border-top: .2vh solid #EDEDF0;
+  border-right: .2vh solid #EDEDF0;
+  padding: 1.5vh;
+  width: 75%;
+}
+
+.box__buttons_add {
+  font-weight: bold;
+  font-size: 1.8vh;
+  padding: 1.6vh;
+  border-top: .2vh solid #EDEDF0;
+  width: 45%;
+}
+
+.box__card_info {
+  border: .2vh solid #EDEDF0;
+  border-radius: 1vh;
+}
+
+.box__name {
+  font-size: 2.5vh;
+}
+
+.box__title {
+  color: #545454;
+  font-size: 1.5vh;
+}
+
+.main__button {
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom:10vh;
+
+  button {
+    background: inherit;
+    border: .2vh solid #4E9DD3;
+    border-radius: .5vh;
+    font-size: 2vh;
+    padding: 1.5vh 10.3vh;
+  }
+}
+
+.footer {
+  background: #EBEDEE;
+  padding: 2.5vh 7%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__stats_row{
+  display: flex;
+  text-align: center;
+  margin-bottom:5vh;
+}
+.footer__stat{
+  width:25%;
+}
+.footer__list{
+  div{
+    margin:1.2vh 0;
+    &:nth-child(1){
+      font-size: 2vh;
+    }
+  }
+}
