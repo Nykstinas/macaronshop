@@ -1,6 +1,7 @@
 package com.pet.macaronshop.service.Impl;
 
 import com.pet.macaronshop.model.BacketItem;
+import com.pet.macaronshop.model.Item;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -16,20 +17,20 @@ import java.util.List;
 @Primary
 public class BacketServiceImpl implements BacketService {
 
-    private final BacketRepository repository;
+    private final BacketRepository backetRepository;
 
     @Override
     @Transactional
     public Backet createBacket(Backet backet) {
-        return repository.save(backet);
+        return backetRepository.save(backet);
     }
 
 
     @Transactional
     public Backet updateBacket(Long backetId, List<BacketItem> items) {
-        Backet existing = repository.findById(backetId)
+        Backet existing = backetRepository.findById(backetId)
                 .orElseThrow(() -> new RuntimeException("Backet not found"));
         existing.setBacketItems(items);
-        return repository.save(existing);
+        return backetRepository.save(existing);
     }
 }
