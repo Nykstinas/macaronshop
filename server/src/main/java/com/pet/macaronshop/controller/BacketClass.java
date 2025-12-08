@@ -11,6 +11,7 @@ import com.pet.macaronshop.service.ItemService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/backets")
 @AllArgsConstructor
