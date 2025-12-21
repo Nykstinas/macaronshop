@@ -13,6 +13,6 @@ export class itemResolver implements Resolve<any> {
   constructor(private http: HttpClient) {}
 
   resolve(): Observable<any> {
-    return this.http.get('http://localhost:8080/api/backets/readItem');
+    return this.http.get('http://localhost:8080/api/item/readItem');
   }
 }

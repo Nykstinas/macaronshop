@@ -29,9 +29,15 @@ public class ItemServiceImpl implements ItemService {
     }
 
 
+    @Override
     @Transactional
     public List<Item> findAllItem() {
         return itemRepository.findAll();
     }
 
+
+    @Transactional
+    public Item findItemById(Long itemId) {
+        return itemRepository.findByItemId(itemId);
+    }
 }

@@ -1,3 +1,21 @@
 spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 20MB
   application:
     name: macaronshop
+  upload:
+    dir: src/main/resources/static/uploads
+  datasource:
+    url: jdbc:postgresql://localhost:5432/macaronshop
+    username: postgres
+    password: 22822333
+  jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
+
+

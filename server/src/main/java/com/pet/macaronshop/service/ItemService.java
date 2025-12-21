@@ -10,7 +10,7 @@ public interface ItemService {
     @Transactional
     Item createItem(Item item);
 
-
+    Item findItemById(Long itemId);
 
     List<Item> findAllItem();
 

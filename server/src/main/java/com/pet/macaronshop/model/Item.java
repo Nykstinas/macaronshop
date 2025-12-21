@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @Builder
@@ -19,4 +21,7 @@ public class Item  {
     private String name;
     private String title;
     private Integer price;
+    @Column(columnDefinition = "text[]")
+    private List<String> images;
+
 }

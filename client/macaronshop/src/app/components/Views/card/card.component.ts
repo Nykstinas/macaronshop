@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'card',
@@ -11,6 +11,15 @@ import {RouterLink} from '@angular/router';
   ]
 })
 
-export class CardView {
+export class CardView implements OnInit{
 
+  items: any;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.data.subscribe(data => {
+      this.items = data['items'];
+    });
+  }
 }
