@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class itemResolver implements Resolve<any> {
+export class mainResolver implements Resolve<any> {
 
   constructor(private http: HttpClient) {}
 
   resolve(): Observable<any> {
-    return this.http.get('http://localhost:8080/api/item/readItem');
+    return this.http.get('http://localhost:8080/api/item/findItems');
   }
 }

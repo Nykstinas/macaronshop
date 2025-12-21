@@ -1,15 +1,17 @@
 import { Routes } from '@angular/router';
 import {MainView} from './components/Views/main/main.component';
 import {CardView} from './components/Views/card/card.component';
-import {itemResolver} from './components/resolver/itemResolver';
+import {mainResolver} from './components/resolver/mainResolver'
+import {cardResolver} from './components/resolver/cardResolver';
 
 export const routes: Routes = [
   {
     path:'',
     component:MainView,
-    resolve: { item: itemResolver }
+    resolve: { item: mainResolver }
   },{
-    path:'card',
-    component:CardView
+    path:'card/:itemId',
+    component:CardView,
+    resolve: { item: cardResolver }
   }
 ];

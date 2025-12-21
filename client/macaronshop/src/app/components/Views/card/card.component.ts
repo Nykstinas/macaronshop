@@ -13,13 +13,13 @@ import {ActivatedRoute, RouterLink} from '@angular/router';
 
 export class CardView implements OnInit{
 
-  items: any;
+  item: any;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.data.subscribe(data => {
-      this.items = data['items'];
+      this.item = data['item'];
     });
   }
 }

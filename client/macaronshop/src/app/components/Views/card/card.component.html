@@ -8,7 +8,7 @@
   <div class="main__links">Главная > Каталог > Готовые наборы</div>
   <div class="card__view">
     <div class="card__view_show">
-      <img class="card__main_img" src="../../../server/src/main/resources/static"/>
+      <img class="card__main_img" [src]="'http://localhost:8080/' + item.images[0]" />
       <div class="card__view_imgs">
         <img class="card__side_img" src="../../../../assets/buckets.png"/>
         <img class="card__side_img" src="../../../../assets/buckets.png"/>
@@ -16,8 +16,8 @@
       </div>
     </div>
     <div class="card__view_content">
-      <div class="card__view_name">Сердце</div>
-      <div class="card__view_title">40 макаронс в круглой коробке с персональной надписью</div>
+      <div class="card__view_name">{{item.name}}</div>
+      <div class="card__view_title">{{ item.title }}</div>
       <div class="card__view_table">
         <div class="card__table_name">Вкусы:</div>
         <div class="card__table_stat">
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="card__view_pay">
-        <div class="card__pay_cost">2800 руб</div>
+        <div class="card__pay_cost">{{item.price}} руб</div>
         <button class="card__pay_button">В корзину</button>
       </div>
       <div class="card__view_stats">
