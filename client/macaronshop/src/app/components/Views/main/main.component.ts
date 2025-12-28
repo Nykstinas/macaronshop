@@ -16,9 +16,11 @@ import {CommonModule} from '@angular/common';
 export class MainView implements OnInit{
   items: any;
 
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.items = this.route.snapshot.data['item'];
+
   }
 }
